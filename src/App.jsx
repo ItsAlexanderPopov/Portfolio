@@ -1,0 +1,22 @@
+import React from 'react';
+import './index.css';
+import { Navbar, Header, About, Skills, Projects, Contact, Footer } from './components';
+
+function App() {
+  
+  return (
+    <div>
+      <Navbar/>
+      <div className='max-w'>
+       <Header/>
+       <About/>
+       <Skills/>
+       <Projects/>
+{/*        <Contact/> */}
+       <Footer/>
+      </div>
+    </div>
+  )
+}
+
+export default App

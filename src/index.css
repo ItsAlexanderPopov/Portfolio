@@ -1,0 +1,65 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --mainColor: #0b132bff;
+  --lightMainColor: #1c2541ff;
+  --secondaryColor: #f8f4f9ff;
+  --thirdColor: #fca311ff;
+}
+
+html{
+  scroll-behavior: smooth;
+  scroll-padding: 3rem; /* same as navbar height in Navbar.jsx classname of nav */
+}
+
+body{
+  background-color: var(--mainColor);
+  color: var(--secondaryColor);
+  font-size: 18px;
+}
+
+.max-w{
+  max-width: 1440px;
+  margin: auto;
+}
+
+.nav-btn{
+  color: var(--thirdColor);
+  padding-bottom: 4px;
+  padding-inline: 0px;
+  box-sizing: border-box;
+  width:120px; 
+  max-width:120px;
+  text-align: center;
+}
+
+.nav-underline{
+  width: 120px;
+  height: 2px;
+  border-radius: 3px;
+  background-color: var(--thirdColor);
+  top: 37px;
+  transition: ease 0.5s;
+  position: absolute;
+}
+
+.nav-btn:hover{
+  color:var(--secondaryColor);
+}
+
+
+.screen-h{ /* temp */
+  height: 900px;
+}
+
+h2{
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+
+/* -------------------typing and erasing-------------------------- */
+
