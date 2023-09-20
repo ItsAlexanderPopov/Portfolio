@@ -4,7 +4,7 @@ const ProjectCards = ({image, title, date, desc, skills, linkGit, linkDemo}) => 
   return (
     <div className='bg-lightMainColor rounded-lg mb-12 flex mx-32 shadow-project shadow-lightMainColor'>
         <div className='flex w-full h-fit place-self-center m-4'>
-            <img src={image} alt='screnshot' className=' rounded-lg'/>
+            <a href={linkDemo} target='_blank'><img src={image} alt='screnshot' className=' rounded-lg'/></a>
         </div>
         
         <div className='flex flex-col w-full m-4 text-secondaryColor justify-center text-center gap-8'>

@@ -1,11 +1,25 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Socials from './Socials'
+import gsap from 'gsap'
+import { TextPlugin } from "gsap/TextPlugin";
+gsap.registerPlugin(TextPlugin);
 
 const Header = () => {
-  const textArr = ["Fullstack", "Web", "Software"]
+  // GSAP animation typewrite
+  useEffect(()=> {
+  const typewriteTextArr = ["Fullstack", "Web", "Software"]
+  let cursorAnimation = gsap.to('.cursorAnimation', {opacity: 0, ease:"power2.inOut", repeat: -1})
+  
+  let typewrite = gsap.timeline({repeat: -1})
+  typewriteTextArr.forEach(word => {
+      let tl = gsap.timeline({repeat: 1, yoyo: true, repeatDelay: 1})
+      tl.to('.typewrite', {duration: 1, text: word})
+      typewrite.add(tl)
+  })
+  },[])
   
   return (
-    <section id='Home' className='screen-h bg-mainColor p-36'>
+    <section id='Home' className='screen-h bg-mainColor mt-40'>
       <p className='text-6xl'> 
         Hello, I'm
       </p>
@@ -13,7 +27,7 @@ const Header = () => {
         Alex Popov
       </p>
       <p className='text-2xl ml-8'>
-        I am Fullstack Developer, Web Developer, Software Developer
+        I am <span className='typewrite'> </span> <span className='cursorAnimation'>_</span> Developer
       </p>
       <div className='m-8'>
         <Socials/>

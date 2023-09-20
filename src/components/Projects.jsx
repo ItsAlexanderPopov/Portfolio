@@ -1,8 +1,10 @@
 import React from 'react'
 import ProjectCards from './ProjectCards'
 import webIMG from '../assets/webIMG.jpg'
-
-
+import PortfilioIMG from '../assets/project-portfolio-ps.png'
+import EchoIMG from '../assets/project-echo-ps.png'
+import DashboardIMG from '../assets/project-dashboard-ps.png'
+import SimonGameIMG from '../assets/project-simon-ps.png'
 
 const Projects = () => {
   return (
@@ -10,17 +12,17 @@ const Projects = () => {
       <p className='text-8xl mb-20'>Projects</p>
 
       <ProjectCards
-        image={webIMG}
+        image={PortfilioIMG}
         title={'Portfolio'}
         date={'September 2023'}
         desc={'My own personal portfolio, includes various self made UI and modern clean design to showcase my great pieces of code'}
         skills={['React', 'Vite', 'JavaScript', 'CSS', 'GSAP']}
-        linkGit={'asd'}
+        linkGit={'https://github.com/ItsAlexanderPopov/Portfolio '}
         linkDemo={'/'}
       />
 
       <ProjectCards
-        image={webIMG}
+        image={EchoIMG}
         title={'Echo'}
         date={'July 2023'}
         desc={'View our unique digital time capsule on Echo, and post your own piece by logging in with your Google account'}
@@ -30,13 +32,13 @@ const Projects = () => {
       />
 
       <ProjectCards
-        image={webIMG}
+        image={DashboardIMG}
         title={'Dashboard'}
         date={'August 2023'}
         desc={'Dashboards never looked as easy to use as this one, get a look at what could possibly be yours, To handle your business data more effeciently than ever.'}
         skills={['React', 'Vite', 'Auth', 'CSS', 'MongoDB', 'Electron', 'Tailwind', 'Syncfusion']}
-        linkGit={'https://dashboard-ap.vercel.app'}
-        linkDemo={'https://github.com/ItsAlexanderPopov/dashboard'}
+        linkGit={'https://github.com/ItsAlexanderPopov/dashboard'}
+        linkDemo={'https://dashboard-ap.vercel.app'}
       />
 
       <ProjectCards
@@ -50,7 +52,7 @@ const Projects = () => {
       />
 
       <ProjectCards
-        image={webIMG}
+        image={SimonGameIMG}
         title={'Simon Game'}
         date={'July 2023'}
         desc={'The classic and popular Simon Game, test your memory power in both playable game difficulties.'}

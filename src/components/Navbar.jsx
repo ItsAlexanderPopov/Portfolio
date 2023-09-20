@@ -1,9 +1,10 @@
 import React, { useState, useEffect} from 'react'
-import gsap from 'gsap'
 import logo from '../assets/Logo1.png'
+import gsap from 'gsap'
+
 const Navbar = () => {
 
-  const [activeLink, setActiveLink] = useState(0);
+  // const [activeLink, setActiveLink] = useState(0); find a way to fix setstate inside useeffect
 
   const underlineAnimation = (index) => {
     gsap.timeline()
@@ -12,19 +13,17 @@ const Navbar = () => {
     .to(".nav-underline", {scaleX: 1, duration:0.1, delay:0.7})
   }
 
-
   useEffect(() => {
     let sections = document.querySelectorAll('section')
-    const handleScroll = event => {
-      //console.log(sections)
+    const handleScroll = () => {
       sections.forEach((sec, index) => { 
         let offset = window.scrollY;
         let top = sec.offsetTop - 49;
         let height = sec.offsetHeight;
-        console.log("index: " + index + " offset:" + offset + " top: " + top + " height: " + height +" "+ (offset >= top && offset < top + height && activeLink !== index))
-        if( offset >= top && offset < top + height && activeLink !== index){
-          setActiveLink(index);
-          underlineAnimation(index)
+        console.log("index: " + index + " offset:" + offset + " top: " + top + " height: " + height +" "+ (offset >= top && offset < top + height))
+        if( offset >= top && offset < top + height /* && activeLink !== index */){
+          // setActiveLink(index) ----- doesn't work 
+          underlineAnimation(index) // GSAP animation
         }
       })
     };
