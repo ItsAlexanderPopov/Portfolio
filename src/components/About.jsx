@@ -2,17 +2,20 @@ import React from 'react'
 
 const About = () => {
   return (
-    <section id='About' className='flex justify-end'>
-      <div className='screen-h text-xl flex flex-col'>
-        <p className='text-8xl mb-20'>About Me</p>
-        <p className='whitespace-pre-line leading-8'>
+    <section id='About' className='flex justify-between items-center h-screen'>
+      <div className='border-2 w-1/4 h-[10rem] rounded-full mx-12'>
+
+      </div>
+      <div className='flex flex-col bg-lightMainColor max-h-fit p-4 rounded-lg'>
+        <h2>{'<About Me>'}</h2>
+        <p className='whitespace-pre-line text-slate-400 leading-8 conte-start'>
           {`
-            Hello! I'm Alex Popov, a passionate and creative self taught full-stack developer.
-            I implement innovative ideas into functional and user-friendly applications.
-            With a strong foundation in both front-end and back-end modern technologies.
-            Continually learning and refining my skills and techniques to produce clean and effecient up to date code.
-            As a collaborative team player, I love to share and listen for outstanding development ideas, 
-            Whether working independently or as part of a team, I'm commited to produce high quality work to my clients.
+            a passionate and creative self taught fullstack developer.
+            I turn innovative ideas into functional and user-friendly applications.
+            With a solid grasp of frontend and backend modern technologies.
+            Constantly improving skills for clean, efficient, up-to-date code.
+            I'm a team player who values collaboration, listens for great ideas, 
+            and consistently delivers high-quality work, whether solo or in a team.
         `}
         </p>
       </div>

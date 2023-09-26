@@ -13,8 +13,10 @@ export default {
         'thirdColor': '#fca311ff',
       },
       boxShadow: {
-        'skill': '3px 3px 1px',
-        'project':'0 0 15px',
+        'project':'0px 10px 20px',
+      },
+      fontFamily: {
+        'body': "Open Sans"
       },
     },
   },

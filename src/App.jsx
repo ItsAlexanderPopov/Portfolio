@@ -7,7 +7,7 @@ function App() {
   return (
     <div>
       <Navbar/>
-      <div className='max-w'>
+      <div className='max-w box-border m-auto'>
        <Header/>
        <About/>
        <Skills/>

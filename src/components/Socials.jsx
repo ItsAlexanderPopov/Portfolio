@@ -3,7 +3,7 @@ import { SiLinkedin, SiGithub } from 'react-icons/si'
 
 const Socials = () => {
   return (
-    <div className='flex gap-8 mt-2 text-4xl'>
+    <div className='flex gap-8 mt-2 text-2xl'>
       <a href='https://www.linkedin.com/in/-alexanderpopov/' target='_blank'>
        <SiLinkedin/>
       </a>
