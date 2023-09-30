@@ -4,7 +4,7 @@ const ProjectCards = ({image, title, desc, skills, linkGit, linkDemo}) => {
   return (
     <div className='bg-lightMainColor rounded-lg mb-12 flex flex-row odd:flex-row-reverse w-2/3 m-auto shadow-project shadow-black p-4'>
         <div className='flex w-full h-[fit] justify-center items-start m-4'>
-            <a href={linkDemo} target='_blank'><img style={{height: "350px", width:'450px', objectFit:'cover'}} src={image} alt='screnshot' className='rounded-lg'/></a>
+            <a href={linkDemo ? linkDemo:linkGit} target='_blank'><img style={{height: "350px", width:'450px', objectFit:'cover'}} src={image} alt='screnshot' className='rounded-lg'/></a>
         </div>
         
         <div className='flex flex-col w-full text-secondaryColor justify-center self-center text-center gap-4 h-[350px]'>

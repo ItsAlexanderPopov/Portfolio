@@ -12,7 +12,7 @@ const Navbar = () => {
   }
 
   const [activeSection, setActiveSection] = useState(0);
-  const sectionNames = ['Home', 'About', 'Skills', 'Projects'];
+  const sectionNames = ['Home', 'About', 'Skills', 'Projects', 'Contact'];
 
   useEffect(() => {
     let newActiveSection = 0;
@@ -22,7 +22,7 @@ const Navbar = () => {
       const yOffset = window.scrollY;
       // Find the current active section
       sections.forEach((section, index) => {
-        const sectionTop = section.offsetTop - 48;
+        const sectionTop = section.offsetTop - 56;
         const sectionBottom = sectionTop + section.offsetHeight;
 
         if (yOffset >= sectionTop && yOffset < sectionBottom) {
@@ -49,7 +49,7 @@ const Navbar = () => {
     <nav className='bg-lightMainColor box-border z-50 sm:sticky sm:top-0 fixed bottom-0 top-auto w-full h-fit'>
       <div className='flex sm:justify-between max-w items-center justify-center'>
         <a className='sm:block hidden cursor-pointer' href='/'><img src={logo} alt='<AP/>' width={100}/></a>
-        <div className='flex relative items-center py-4'>
+        <div className='flex items-center py-4'>
           {sectionNames.map((section, index)=>(
             <a key={index} className={`nav-btn text-sm sm:text-[16px] sm:max-w-[120px] sm:w-[120px] sm:duration-1000 sm:delay-1000 w-[80px] max-w-[80px]  ${activeSection === index ? 'active-nav-btn' : ''}`} href={`#${section}`}>
               {section}

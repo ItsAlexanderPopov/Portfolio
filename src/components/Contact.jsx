@@ -1,35 +1,97 @@
-import React, { useState } from 'react'
+import React, { useState, useRef } from 'react'
+import emailjs from '@emailjs/browser'
+import {Button} from './'
 
 const Contact = () => {
+  const formRef = useRef()
+  const [form, setForm] = useState({
+    name: '',
+    email: '',
+    message: '',
+  })
+  const [loading, setLoading] = useState(false)
 
-  const [ subject, setSubject ] = useState('')
-  const [ email, setEmail ] = useState('')
-  const [ message, setMessage ] = useState('')
+  const handleChange = (e) => {
+    const {name, value} = e.target;
+    setForm({ ...form, [name]: value })
+  }
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setLoading(true)
+    emailjs.send(
+      /* import.meta.env.EMAIL_SERVICE_ID, 
+      import.meta.env.EMAIL_TEMPLATE_ID, */
+      "service_4nd5l95",
+      "template_l1mw5e7",
+      {
+        from_name: form.name,
+        to_name: 'Alex Popov',
+        from_email: form.email,
+        to_email: 'itsalexanderpopov@gmail.com',
+        message: form.message,
+      },
+      /* import.meta.env.EMAIL_PUBLIC_KEY */
+      "IJ8WVX-UToXu6aJse"
+      ).then(() => {
+        setLoading(false)
+        alert('Message has been sent, thank you! I will respond as soon as possible.')
+        setForm({name:'', email:'', message:''})
 
+      }, (error)=> {
+        setLoading(false)
+        console.log(error)
+        alert('Something went wrong.')
+      })
+  }
   return (
-    <section id='Contact'>
-      <p className='text-8xl mb-20'>Contact Me</p>
-      <div className='bg-lightMainColor rounded-lg mb-20 flex m-auto shadow-project shadow-lightMainColor h-[650px]'>
-        <form id='contact-form' className='m-4 flex flex-col gap-20 text-mainColor'>
-          <div className='flex gap-20'>
-            <div>
-              <label htmlFor='email' className='text-secondaryColor mr-4'>Email</label>
-              <input type='email' id='email' className='rounded-sm bg-secondaryColor'
-              ></input>
-            </div>
+    <section id='Contact' className='py-[170px]'>
+        <h2 className='text-center mb-4'>{'<Contact Me>'}</h2>
+        <div className='bg-lightMainColor rounded-lg w-1/2 m-auto shadow-project shadow-black p-8'>
+        <form
+        ref={formRef}
+        onSubmit={handleSubmit}
+        className='my-4 flex flex-col gap-4'
+        >
 
-            <div>
-              <label htmlFor='subject' className='text-secondaryColor mr-4'>Subject</label>
-              <input type='text' id='subject' className='rounded-sm bg-secondaryColor'
-              ></input>
-            </div>
+          <div className='relative'>
+            <input
+              id='name'
+              type='text'
+              name='name'
+              placeholder='Your Name'
+              value={form.name}
+              required
+              onChange={handleChange}
+              className='p-2 bg-mainColor rounded-md w-1/2'
+            />
+            <label htmlFor='name'> Name </label>
           </div>
-          <div className='flex'>
-            <label htmlFor='message' className='text-secondaryColor mr-4'>Message</label>
-            <textarea id='message' rows={4} cols={20} maxLength={500} 
-            className='rounded-sm bg-secondaryColor'
-            ></textarea>
+          <div className='relative'>
+            <input
+              id='email'
+              type='email'
+              name='email'
+              placeholder='Your Email'
+              value={form.email}
+              required
+              onChange={handleChange}
+              className='p-2 bg-mainColor rounded-md w-1/2'
+            />
+            <label htmlFor='email'> Email </label>
           </div>
+          <div className='relative'>
+            <textarea
+              name='message'
+              rows={6}
+              placeholder='Your Message'
+              value={form.message}
+              required
+              onChange={handleChange}
+              className='p-2 bg-mainColor rounded-md w-4/5 resize-none'
+            />
+            <label htmlFor='message'> Message </label>
+          </div>
+          <Button text={loading ? 'Sending...' : 'Send'}/>
         </form>
       </div>
     </section>

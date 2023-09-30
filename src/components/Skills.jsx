@@ -139,7 +139,7 @@ const toolsLogos=[
 ]
   return (
     <section id='Skills' className='h-screen items-center justify-center flex flex-col gap-12 -mt-12'>
-        <h2 className='-mb-4'>{`<Skills>`}</h2>
+        <h2 className='-mb-8'>{`<Skills>`}</h2>
         <div className="slider">
           <div className="slide-track-first">
             {frontendLogos.map((logo) => (

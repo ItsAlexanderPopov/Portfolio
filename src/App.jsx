@@ -1,6 +1,6 @@
 import React from 'react';
 import './index.css';
-import { Navbar, Header, About, Skills, Projects, Contact, Footer } from './components';
+import { Navbar, Header, About, Skills, Projects, Contact, Footer, Button } from './components';
 
 function App() {
   
@@ -12,7 +12,7 @@ function App() {
        <About/>
        <Skills/>
        <Projects/>
-{/*        <Contact/> */}
+       <Contact/>
        <Footer/>
       </div>
     </div>

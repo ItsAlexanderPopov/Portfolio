@@ -7,7 +7,7 @@ import FolderProtectorIMG from '../assets/project-folder-protector-ps.png'
 
 const Projects = () => {
   return (
-    <section id='Projects' className='my-20 scroll-m-16'>
+    <section id='Projects' className='py-20'>
 
       <h2 className='mb-4 text-center'>{'<Projects>'}</h2>
 

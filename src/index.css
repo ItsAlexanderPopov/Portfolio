@@ -19,7 +19,6 @@ body{
   color: var(--secondaryColor);
   font-size: 18px;
   font-family: "Poppins", sans-serif;
-  position: relative;
   min-height: 100vh;
 }
 
@@ -175,5 +174,42 @@ h2{
   }
   100% {
     transform: translateX(calc(-270px * 8)); /* Adjust the number of logos */
+  }
+}
+
+label{
+  z-index: 2;
+  font-size: 14px;
+  opacity: 0;
+  position: absolute;
+  top:-13px; left:4px;
+  width: max-content;
+  color: var(--secondaryColor);
+  font-weight: bold;
+  background: linear-gradient(180deg, transparent calc(50% - 1px), var(--mainColor) calc(50% - 1px), var(--mainColor) 50%);
+  overflow: hidden;
+  border-radius: 10%;
+  padding-inline: 10px;
+  display: block;
+  width:0;
+  text-align: center;
+  
+}
+
+input:focus + label, textarea:focus + label{
+  animation: labelFadeIn 1s linear 0s forwards;
+}
+
+@keyframes labelFadeIn{
+  0%{
+    width: 0px;
+  }
+  20%{
+    opacity:1;
+    width: 20px;
+  }
+  100%{
+    opacity:1;
+    width: 100px;
   }
 }
