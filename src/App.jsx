@@ -1,6 +1,6 @@
 import React from 'react';
 import './index.css';
-import { Navbar, Header, About, Skills, Projects, Contact, Footer, Button } from './components';
+import { Navbar, Header, About, Skills, Projects, Contact, Footer} from './components';
 
 function App() {
   

@@ -2,7 +2,7 @@ import React from 'react'
 
 const About = () => {
   return (
-    <section id='About' className='flex justify-between items-center h-screen'>
+    <section id='About' className='flex lg:justify-between justify-center lg:items-center min-h-screen lg:flex-row flex-col-reverse mx-20 lg:mx-0'>
       <div className='border-2 w-96 h-96 mr-[10%]'>
 
       </div>
@@ -15,8 +15,7 @@ const About = () => {
               I turn innovative ideas into functional and user-friendly applications.
               With a solid grasp of frontend and backend modern technologies.
               Constantly improving skills for clean, efficient, up-to-date code.
-              I'm a collaborative team player who consistently delivers high-quality work, 
-              whether solo or in a team, while actively seeking great ideas.
+              I'm a collaborative team player who consistently delivers high-quality work.
           `}
           </p>
         </div>

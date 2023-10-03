@@ -12,36 +12,53 @@
 html{
   scroll-behavior: smooth;
   scroll-padding: 3rem; /* same as navbar height in Navbar.jsx classname of nav */
+  font-size: 10px;
+}
+@media only screen and (min-width: 720px) {
+  html {
+      font-size: 12px;
+  }
+}
+
+@media only screen and (min-width: 960px) {
+  html {
+      font-size: 14px;
+  }
+}
+
+@media only screen and (min-width: 1240px) {
+  html {
+      font-size: 16px;
+  }
 }
 
 body{
   background-color: var(--mainColor);
   color: var(--secondaryColor);
-  font-size: 18px;
   font-family: "Poppins", sans-serif;
   min-height: 100vh;
 }
 
 h1{
-  font-size: 46px;
+  font-size: 2.875rem;
   font-weight: 500;
   color: var(--secondaryColor);
 }
 
 h2{
-  font-size: 36px !important;
+  font-size: 2.25rem !important;
   font-weight: 600 !important;
   color: var(--secondaryColor) !important;
 }
 
 h3{
-  font-size: 28px;
+  font-size: 1.75rem;
   font-weight: 500;
   color: var(--secondaryColor);
 }
 
 p{
-  font-size: 20px;
+  font-size: 1.25rem;
 }
 .max-w{
   max-width: 1440px;
@@ -96,7 +113,7 @@ h2{
   content: "";
   height: 150px;
   position: absolute;
-  width: 200px;
+  width: 10%;
   z-index: 2;
 }
 
@@ -114,21 +131,21 @@ h2{
 .slide-track-first {
   animation: scroll-1st-row 40s linear infinite;
   display: flex;
-  width: calc(270px * 10); /* Adjust the number of repetitions */
+  width: calc(16.875rem * 10); /* Multiplied by number of logos */
   height: 150px;
 }
 
 .slide-track-second {
   animation: scroll-2nd-row 40s linear infinite;
   display: flex;
-  width: calc(270px * 8); /* Adjust the number of repetitions */
+  width: calc(16.875rem * 8); /* Multiplied by number of logos */
   height: 150px;
 }
 
 .slide-track-third {
   animation: scroll-3rd-row 40s linear infinite;
   display: flex;
-  width: calc(270px * 7); /* Adjust the number of repetitions */
+  width: calc(16.875rem * 7); /* Multiplied by number of logos */
   height: 150px;
 }
 
@@ -137,17 +154,17 @@ h2{
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 20px;
-  width: 150px;
-  margin-right: 120px;
-  flex-shrink: 0; /* Prevents shrinking */
-  flex-grow: 0; /* Prevents growing */
+  gap: 1.25rem;
+  width: 9.375rem; /* 150px */
+  margin-right: 7.5rem;
+  flex-shrink: 0;
+  flex-grow: 0; 
 }
 
 .slide img {
   max-width: 100%;
-  width: 48px;
-  height: 48px;
+  width: 3rem;
+  height: 3rem;
 }
 
 @keyframes scroll-1st-row {
@@ -155,13 +172,13 @@ h2{
     transform: translateX(0);
   }
   100% {
-    transform: translateX(calc(-270px * 10)); /* Adjust the number of logos */
+    transform: translateX(calc(-16.875rem * 10)); /* Multiplied by number of logos */
   }
 }
 
 @keyframes scroll-2nd-row {
   0% {
-    transform: translateX(calc(-270px * 7)); /* Adjust the number of logos */
+    transform: translateX(calc(-16.875rem * 7)); /* Multiplied by number of logos */
   }
   100% {
     transform: translateX(0);
@@ -173,7 +190,7 @@ h2{
     transform: translateX(0);
   }
   100% {
-    transform: translateX(calc(-270px * 8)); /* Adjust the number of logos */
+    transform: translateX(calc(-16.875rem * 8)); /* Multiplied by number of logos */
   }
 }
 
@@ -186,7 +203,8 @@ label{
   width: max-content;
   color: var(--secondaryColor);
   font-weight: bold;
-  background: linear-gradient(180deg, transparent calc(50% - 1px), var(--mainColor) calc(50% - 1px), var(--mainColor) 50%);
+  /* Makes the outline look invisible in the width of text */
+  background: linear-gradient(180deg, transparent calc(50% - 1px), var(--mainColor) calc(50% - 1px), var(--mainColor) 50%); 
   overflow: hidden;
   border-radius: 10%;
   padding-inline: 10px;
@@ -212,4 +230,20 @@ input:focus + label, textarea:focus + label{
     opacity:1;
     width: 100px;
   }
+}
+
+input:focus::placeholder, textarea:focus::placeholder{
+  color:transparent;
+}
+
+input::selection, textarea::selection{
+  background-color: var(--lightMainColor); /* Set the background color for selected text */
+  color:var(--secondaryColor);
+}
+input:-webkit-autofill {
+  background-color: transparent !important; /* Set the background color to transparent */
+}
+
+input:autofill {
+  background-color: transparent !important;
 }

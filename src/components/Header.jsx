@@ -20,10 +20,10 @@ const Header = () => {
   })
   },[])
   return (
-    <section id='Home' className='screen-h bg-mainColor flex lg:justify-between lg:flex-row items-center justify-center flex-col-reverse'>
-        <div className='flex flex-col gap-3'>
+    <section id='Home' className='bg-mainColor flex lg:justify-between lg:flex-row lg:items-center justify-center flex-col-reverse mx-20 lg:mx-0 min-h-screen'>
+        <div className='flex flex-col gap-3 box-border'>
           <h1>
-            I am <span className='typewrite font-[600] text-thirdColor'> </span> <span className='cursorAnimation'>{`<`}</span> Developer
+            I am <br className='lg:hidden block'/><span className='typewrite font-[600] text-thirdColor'> </span> <span className='cursorAnimation'>{`<`}</span> <br className='lg:hidden block'/>Developer
           </h1>
           <p className='text-secondaryColor'>
             Hello my name is Alex Popov, based in Israel.

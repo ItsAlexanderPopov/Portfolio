@@ -23,7 +23,7 @@ const Projects = () => {
       <ProjectCards
         image={DashboardIMG}
         title={'Dashboard'}
-        desc={'Dashboards never looked as easy to use as this one, get a look at what could possibly be yours, To handle your business data more effeciently than ever.'}
+        desc={'Multifunctional dashboard that has great apps ready-to-use, and various of graphs and grids to showcase and manipulate data cleanly.'}
         skills={['React', 'Vite', 'Auth', 'CSS', 'MongoDB', 'Electron', 'Tailwind', 'Syncfusion']}
         linkGit={'https://github.com/ItsAlexanderPopov/dashboard'}
         linkDemo={'https://dashboard-ap.vercel.app'}
@@ -32,7 +32,7 @@ const Projects = () => {
       <ProjectCards
         image={FolderProtectorIMG}
         title={'Folder Protection'}
-        desc={`Personally made for an Escape Room puzzle, Keep your "Rocket" folder on desktop hidden, and access it through the desktop's application password.`}
+        desc={`Desktop application that has been made and used as a puzzle in an Escape Room, It reveals a hidden folder when answered the question correctly.`}
         skills={['React', 'Electron', 'CSS']}
         linkGit={'https://github.com/ItsAlexanderPopov/Folder-Protection'}
       />

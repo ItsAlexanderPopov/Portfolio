@@ -138,7 +138,7 @@ const toolsLogos=[
   },
 ]
   return (
-    <section id='Skills' className='h-screen items-center justify-center flex flex-col gap-12 -mt-12'>
+    <section id='Skills' className='items-center justify-center flex flex-col gap-12 -mt-12 min-h-screen'>
         <h2 className='-mb-8'>{`<Skills>`}</h2>
         <div className="slider">
           <div className="slide-track-first">

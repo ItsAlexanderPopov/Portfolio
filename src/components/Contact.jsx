@@ -1,6 +1,7 @@
 import React, { useState, useRef } from 'react'
 import emailjs from '@emailjs/browser'
-import {Button} from './'
+import {Button, Footer} from './'
+
 
 const Contact = () => {
   const formRef = useRef()
@@ -44,13 +45,13 @@ const Contact = () => {
       })
   }
   return (
-    <section id='Contact' className='py-[170px]'>
-        <h2 className='text-center mb-4'>{'<Contact Me>'}</h2>
-        <div className='bg-lightMainColor rounded-lg w-1/2 m-auto shadow-project shadow-black p-8'>
+    <section id='Contact' className='flex justify-center items-center flex-col min-h-[90vh]'>
+        <h2 className='text-center'>{'<Contact Me>'}</h2>
+        <div className='bg-lightMainColor rounded-lg sm:w-1/2 w-full shadow-project shadow-black p-8'>
         <form
         ref={formRef}
         onSubmit={handleSubmit}
-        className='my-4 flex flex-col gap-4'
+        className='my-4 flex flex-col gap-8'
         >
 
           <div className='relative'>
