@@ -45,13 +45,13 @@ const Contact = () => {
       })
   }
   return (
-    <section id='Contact' className='flex justify-center items-center flex-col min-h-[90vh]'>
+    <section id='Contact' className='flex justify-center items-center flex-col min-h-[88vh]'>
         <h2 className='text-center'>{'<Contact Me>'}</h2>
-        <div className='bg-lightMainColor rounded-lg sm:w-1/2 w-full shadow-project shadow-black p-8'>
+        <div className='bg-lightMainColor rounded-lg sm:w-1/2 w-4/5 shadow-project shadow-black p-8'>
         <form
         ref={formRef}
         onSubmit={handleSubmit}
-        className='my-4 flex flex-col gap-8'
+        className='my-4 flex flex-col gap-8 items-center sm:items-start'
         >
 
           <div className='relative'>
@@ -60,10 +60,11 @@ const Contact = () => {
               type='text'
               name='name'
               placeholder='Your Name'
+              autoComplete='off'
               value={form.name}
               required
               onChange={handleChange}
-              className='p-2 bg-mainColor rounded-md w-1/2'
+              className='p-2 bg-mainColor rounded-md sm:w-[18rem] w-full'
             />
             <label htmlFor='name'> Name </label>
           </div>
@@ -74,9 +75,10 @@ const Contact = () => {
               name='email'
               placeholder='Your Email'
               value={form.email}
+              autoComplete='off'
               required
               onChange={handleChange}
-              className='p-2 bg-mainColor rounded-md w-1/2'
+              className='p-2 bg-mainColor rounded-md sm:w-[18rem] w-full'
             />
             <label htmlFor='email'> Email </label>
           </div>
@@ -88,7 +90,7 @@ const Contact = () => {
               value={form.message}
               required
               onChange={handleChange}
-              className='p-2 bg-mainColor rounded-md w-4/5 resize-none'
+              className='p-2 bg-mainColor rounded-md sm:w-[28rem] w-[200px] resize-none'
             />
             <label htmlFor='message'> Message </label>
           </div>

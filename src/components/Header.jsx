@@ -26,7 +26,7 @@ const Header = () => {
             I am <br className='lg:hidden block'/><span className='typewrite font-[600] text-thirdColor'> </span> <span className='cursorAnimation'>{`<`}</span> <br className='lg:hidden block'/>Developer
           </h1>
           <p className='text-secondaryColor'>
-            Hello my name is Alex Popov, based in Israel.
+            Hello my name is Alex Popov,<br/> always ready to bring ideas to life.
           </p>
           <div className='my-4'>
             <Socials/>

@@ -3,8 +3,8 @@ import Socials from './Socials'
 
 const Footer = () => {
   return (
-    <div className='m-4 flex flex-row items-center justify-between'>
-      <p>Copyright © 2023. All rights are reserved</p>
+    <div className='m-4 flex flex-row items-center justify-between mb-24 sm:mb-4'>
+      <p>Copyright © 2023.<br className='sm:hidden block'/> All rights are reserved</p>
       <Socials/>
     </div>
   ) 

@@ -39,6 +39,10 @@ body{
   min-height: 100vh;
 }
 
+*:focus {
+  outline: none;
+}
+
 h1{
   font-size: 2.875rem;
   font-weight: 500;
@@ -131,21 +135,21 @@ h2{
 .slide-track-first {
   animation: scroll-1st-row 40s linear infinite;
   display: flex;
-  width: calc(16.875rem * 10); /* Multiplied by number of logos */
+  width: calc(16.875em * 10); /* Multiplied by number of logos */
   height: 150px;
 }
 
 .slide-track-second {
   animation: scroll-2nd-row 40s linear infinite;
   display: flex;
-  width: calc(16.875rem * 8); /* Multiplied by number of logos */
+  width: calc(16.875em * 8); /* Multiplied by number of logos */
   height: 150px;
 }
 
 .slide-track-third {
   animation: scroll-3rd-row 40s linear infinite;
   display: flex;
-  width: calc(16.875rem * 7); /* Multiplied by number of logos */
+  width: calc(16.875em * 7); /* Multiplied by number of logos */
   height: 150px;
 }
 
@@ -154,17 +158,17 @@ h2{
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 1.25rem;
-  width: 9.375rem; /* 150px */
-  margin-right: 7.5rem;
+  gap: 1.25em;
+  width: 9.375em; /* 150px */
+  margin-right: 7.5em;
   flex-shrink: 0;
   flex-grow: 0; 
 }
 
 .slide img {
   max-width: 100%;
-  width: 3rem;
-  height: 3rem;
+  width: 3em;
+  height: 3em;
 }
 
 @keyframes scroll-1st-row {
@@ -172,13 +176,13 @@ h2{
     transform: translateX(0);
   }
   100% {
-    transform: translateX(calc(-16.875rem * 10)); /* Multiplied by number of logos */
+    transform: translateX(calc(-16.875em * 10)); /* Multiplied by number of logos */
   }
 }
 
 @keyframes scroll-2nd-row {
   0% {
-    transform: translateX(calc(-16.875rem * 7)); /* Multiplied by number of logos */
+    transform: translateX(calc(-16.875em * 7)); /* Multiplied by number of logos */
   }
   100% {
     transform: translateX(0);
@@ -190,7 +194,7 @@ h2{
     transform: translateX(0);
   }
   100% {
-    transform: translateX(calc(-16.875rem * 8)); /* Multiplied by number of logos */
+    transform: translateX(calc(-16.875em * 8)); /* Multiplied by number of logos */
   }
 }
 
@@ -199,12 +203,12 @@ label{
   font-size: 14px;
   opacity: 0;
   position: absolute;
-  top:-13px; left:4px;
+  top:-12px; left:6px;
   width: max-content;
   color: var(--secondaryColor);
   font-weight: bold;
   /* Makes the outline look invisible in the width of text */
-  background: linear-gradient(180deg, transparent calc(50% - 1px), var(--mainColor) calc(50% - 1px), var(--mainColor) 50%); 
+  background: linear-gradient(180deg, transparent calc(50%), var(--mainColor) calc(50%), var(--mainColor) 50%); 
   overflow: hidden;
   border-radius: 10%;
   padding-inline: 10px;
@@ -237,13 +241,10 @@ input:focus::placeholder, textarea:focus::placeholder{
 }
 
 input::selection, textarea::selection{
-  background-color: var(--lightMainColor); /* Set the background color for selected text */
+  background-color: var(--secondaryColor); /* Set the background color for selected text */
   color:var(--secondaryColor);
 }
-input:-webkit-autofill {
-  background-color: transparent !important; /* Set the background color to transparent */
+input:focus, textarea:focus, button:focus{
+  outline: 2px solid var(--secondaryColor);
 }
 
-input:autofill {
-  background-color: transparent !important;
-}
