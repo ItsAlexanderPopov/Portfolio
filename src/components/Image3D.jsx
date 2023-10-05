@@ -12,7 +12,7 @@ const Image3D = ({ image, height, width, objectFit }) => {
       style={imageStyle}
       src={image}
       alt='Screenshot'
-      className='rounded-lg hover:scale-110 duration-500'
+      className='rounded-lg hover:scale-110 duration-500 grayscale hover:grayscale-0 outline-offset-8 outline-1 outline hover:outline-offset-0'
     />
   );
 };

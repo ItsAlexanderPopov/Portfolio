@@ -1,6 +1,6 @@
 import React, { useState, useEffect} from 'react'
-import logo from '../assets/Logo1.png'
 import gsap from 'gsap'
+import {BsArrowUpCircle} from 'react-icons/bs'
 
 const Navbar = () => {
 
@@ -46,18 +46,23 @@ const Navbar = () => {
   }, [activeSection]);
 
   return (
-    <nav className='bg-lightMainColor box-border z-50 md:sticky md:top-0 fixed bottom-0 top-auto w-full sm:h-[54px] h-[34px]'>
-      <div className='flex sm:justify-between max-w items-center justify-center'>
-        <a className='sm:block hidden cursor-pointer' href='/'><img src={logo} alt='<AP/>' width={100} height={54}/></a>
+    <nav className='bg-lightMainColor box-border z-50 sm:sticky sm:top-0 fixed bottom-0 top-auto w-full sm:h-[54px] h-[34px]'>
+      <div className='flex md:justify-between max-w items-center justify-center'>
+        <a className='md:block hidden cursor-pointer' href='/'><img src='Logo1.svg' alt='<AP/>' width={100}/></a>
         <div className='flex items-center py-4'>
           {sectionNames.map((section, index)=>(
-            <a key={index} className={`nav-btn text-[10px] sm:text-[16px] sm:max-w-[120px] sm:w-[120px] sm:duration-1000 sm:delay-1000 w-[60px] max-w-[60px]  ${activeSection === index ? 'active-nav-btn' : ''}`} href={`#${section}`}>
+            <a key={index} className={`nav-btn text-[10px] sm:text-[16px] sm:max-w-[120px] sm:w-[120px] sm:duration-1000 sm:delay-1000 w-[60px] max-w-[60px]  
+            ${activeSection === index ? 'active-nav-btn' : ''}`} 
+            href={`#${section}`}>
               {section}
             </a>
           ))}
           <span className='nav-underline mt-4 hidden sm:block'></span>
         </div>
       </div>
+      <a id='arrowUp' href='#Home' className={`fixed bottom-6 right-6 z-50 duration-500 text-5xl text-secondayColor hidden sm:block
+      ${activeSection !== 0 ? 'visible' : 'invisible'} ${activeSection !== 0 ? 'opacity-100' : 'opacity-0'}`}>
+        <BsArrowUpCircle/></a>
     </nav>
     
   )

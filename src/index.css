@@ -208,7 +208,7 @@ label{
   color: var(--secondaryColor);
   font-weight: bold;
   /* Makes the outline look invisible in the width of text */
-  background: linear-gradient(180deg, transparent calc(50%), var(--mainColor) calc(50%), var(--mainColor) 50%); 
+  background: linear-gradient(180deg, transparent calc(49%), var(--mainColor) calc(51%), var(--mainColor) 50%); 
   overflow: hidden;
   border-radius: 10%;
   padding-inline: 10px;
@@ -245,6 +245,6 @@ input::selection, textarea::selection{
   color:var(--secondaryColor);
 }
 input:focus, textarea:focus, button:focus{
-  outline: 2px solid var(--secondaryColor);
+  outline: 1px solid var(--secondaryColor);
 }
 
