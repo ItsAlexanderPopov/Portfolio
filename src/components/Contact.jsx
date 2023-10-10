@@ -64,7 +64,7 @@ const Contact = () => {
               value={form.name}
               required
               onChange={handleChange}
-              className='p-2 bg-mainColor rounded-md sm:w-[18rem] w-full'
+              className='p-2 bg-mainColor rounded-md sm:w-72 w-full'
             />
             <label htmlFor='name'> Name </label>
           </div>
@@ -78,7 +78,7 @@ const Contact = () => {
               autoComplete='off'
               required
               onChange={handleChange}
-              className='p-2 bg-mainColor rounded-md sm:w-[18rem] w-full'
+              className='p-2 bg-mainColor rounded-md sm:w-72 w-full'
             />
             <label htmlFor='email'> Email </label>
           </div>
@@ -90,7 +90,7 @@ const Contact = () => {
               value={form.message}
               required
               onChange={handleChange}
-              className='p-2 bg-mainColor rounded-md sm:w-[28rem] w-[200px] resize-none'
+              className='p-2 bg-mainColor rounded-md sm:w-96 w-52 resize-none'
             />
             <label htmlFor='message'> Message </label>
           </div>
