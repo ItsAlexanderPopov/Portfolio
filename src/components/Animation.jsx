@@ -17,7 +17,7 @@ const Animation = () => {
         })
 
         ScrollTrigger.defaults({
-            markers: true,
+            markers: false,
             toggleActions: "play reverse play reverse"
         })
 
