@@ -1,9 +1,11 @@
 import React from 'react'
-import {BsGithub , BsArrowUpRightCircle} from 'react-icons/bs'
+import {BsGithub} from 'react-icons/bs'
+import {BiLinkExternal} from 'react-icons/bi'
 import {Image3D} from './'
 const ProjectCards = ({image, title, desc, skills, linkGit, linkDemo}) => {
   return (
-    <div className='bg-lightMainColor rounded-lg mb-12 flex flex-row odd:flex-row-reverse w-2/3 m-auto shadow-project shadow-black p-4'>
+    <div className='bg-lightMainColor rounded-lg mb-12 w-2/3 m-auto shadow-project shadow-black p-4 
+    scrollTrigger-P translate-x-40 odd:-translate-x-40 flex flex-row odd:flex-row-reverse opacity-0'>
         <div className='md:flex hidden w-full h-[fit] justify-center items-start m-4'>
             <a href={linkDemo ? linkDemo:linkGit} target='_blank'><Image3D image = {image} height = {'350px'} width = {'450px'} objectFit={'cover'}/></a>
         </div>
@@ -21,9 +23,9 @@ const ProjectCards = ({image, title, desc, skills, linkGit, linkDemo}) => {
             </div>
             {/* Links */}
             <div className='text-xl flex justify-around'>
-              <a className='flex justify-center gap-3 items-center hover:text-thirdColor duration-300 ease-in-out' href={linkGit} target="_blank"> GitHub<BsGithub/></a>
-              {linkDemo ? <a className='flex justify-center gap-3 items-center hover:text-thirdColor duration-300 ease-in-out'
-               href={linkDemo} target="_blank"> Live Demo<BsArrowUpRightCircle/></a> : null}
+              <a className='flex justify-center gap-3 items-center hover:text-thirdColor duration-300 ease-in-out underline underline-offset-2' href={linkGit} target="_blank"> GitHub<BsGithub/></a>
+              {linkDemo ? <a className='flex justify-center gap-3 items-center hover:text-thirdColor duration-300 ease-in-out underline underline-offset-2'
+               href={linkDemo} target="_blank"> Live Demo<BiLinkExternal/></a> : null}
             </div>
 
         </div>

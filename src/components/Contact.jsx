@@ -47,11 +47,11 @@ const Contact = () => {
   return (
     <section id='Contact' className='flex justify-center items-center flex-col min-h-[88vh]'>
         <h2 className='text-center'>{'<Contact Me>'}</h2>
-        <div className='bg-lightMainColor rounded-lg sm:w-1/2 w-4/5 shadow-project shadow-black p-8'>
+        <div className='bg-lightMainColor rounded-lg sm:w-1/3 w-4/5 shadow-project shadow-black px-6'>
         <form
         ref={formRef}
         onSubmit={handleSubmit}
-        className='my-4 flex flex-col gap-8 items-center sm:items-start'
+        className='my-6'
         >
 
           <div className='relative'>
@@ -64,7 +64,7 @@ const Contact = () => {
               value={form.name}
               required
               onChange={handleChange}
-              className='p-2 bg-mainColor rounded-md sm:w-72 w-full'
+              className='p-2 bg-mainColor rounded-md w-full mb-6'
             />
             <label htmlFor='name'> Name </label>
           </div>
@@ -78,7 +78,7 @@ const Contact = () => {
               autoComplete='off'
               required
               onChange={handleChange}
-              className='p-2 bg-mainColor rounded-md sm:w-72 w-full'
+              className='p-2 bg-mainColor rounded-md w-full mb-6'
             />
             <label htmlFor='email'> Email </label>
           </div>
@@ -90,11 +90,11 @@ const Contact = () => {
               value={form.message}
               required
               onChange={handleChange}
-              className='p-2 bg-mainColor rounded-md sm:w-96 w-52 resize-none'
+              className='p-2 bg-mainColor rounded-md w-full resize-none mb-6'
             />
             <label htmlFor='message'> Message </label>
           </div>
-          <Button text={loading ? 'Sending...' : 'Send'}/>
+            <Button text={loading ? 'Sending...' : 'Send'}/>
         </form>
       </div>
     </section>

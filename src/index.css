@@ -64,6 +64,7 @@ h3{
 p{
   font-size: 1.25rem;
 }
+
 .max-w{
   max-width: 1440px;
   margin: auto;
@@ -239,10 +240,19 @@ input:focus::placeholder, textarea:focus::placeholder{
 }
 
 input::selection, textarea::selection{
-  background-color: var(--secondaryColor); /* Set the background color for selected text */
+  background-color: var(--lightMainColor); /* Set the background color for selected text */
   color:var(--secondaryColor);
 }
 
 input:focus, textarea:focus, button:focus{
   outline: 1px solid var(--secondaryColor);
+}
+
+.scrollTrigger{
+  transform: translateX(-100%);
+  opacity: 0;
+}
+.scrollTrigger-R{
+  transform: translateX(100%);
+  opacity: 0;
 }

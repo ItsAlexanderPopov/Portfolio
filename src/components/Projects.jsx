@@ -24,7 +24,7 @@ const Projects = () => {
         image={DashboardIMG}
         title={'Dashboard'}
         desc={'Multifunctional dashboard that has great apps ready-to-use, and various of graphs and grids to showcase and manipulate data cleanly.'}
-        skills={['React', 'Vite', 'Auth', 'CSS', 'MongoDB', 'Electron', 'Tailwind', 'Syncfusion']}
+        skills={['React', 'CSS', 'JavaScript', 'Tailwind', 'Syncfusion']}
         linkGit={'https://github.com/ItsAlexanderPopov/dashboard'}
         linkDemo={'https://dashboard-ap.vercel.app'}
       />

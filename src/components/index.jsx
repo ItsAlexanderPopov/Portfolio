@@ -7,3 +7,4 @@ export { default as Contact } from './Contact';
 export { default as Footer } from './Footer';
 export { default as Button } from './Button';
 export { default as Image3D } from './Image3D';
+export { default as Animation } from './Animation';

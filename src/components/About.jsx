@@ -3,7 +3,7 @@ import React from 'react'
 const About = () => {
   return (
     <section id='About' className='flex lg:justify-between justify-center lg:items-center min-h-screen lg:flex-row flex-col-reverse mx-20 lg:mx-0'>
-      <div className='border-2 w-96 h-96 mr-[10%]'>
+      <div className='border-2 w-96 h-96 mr-[10%] scrollTrigger'>
 
       </div>
       <div className='flex flex-col'>
