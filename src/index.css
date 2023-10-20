@@ -13,6 +13,7 @@ html{
   scroll-behavior: smooth;
   scroll-padding: 3rem; /* same as navbar height in Navbar.jsx classname of nav */
   font-size: 10px;
+  overflow-x: hidden;
 }
 
 @media only screen and (min-width: 720px) {

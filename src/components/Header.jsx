@@ -22,7 +22,7 @@ const Header = () => {
             <Button text='Download CV'/>
       </div>
       <div className='border-2 w-96 h-96 mr-[10%] translate-x-full scrollTrigger-R'>
-
+        
       </div>
     </section>
   )

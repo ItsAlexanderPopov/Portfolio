@@ -45,7 +45,7 @@ const Contact = () => {
       })
   }
   return (
-    <section id='Contact' className='flex justify-center items-center flex-col min-h-[88vh]'>
+    <section className='flex justify-center items-center flex-col min-h-screen'>
         <h2 className='text-center'>{'<Contact Me>'}</h2>
         <div className='bg-lightMainColor rounded-lg sm:w-1/3 w-4/5 shadow-project shadow-black px-6'>
         <form
@@ -94,7 +94,9 @@ const Contact = () => {
             />
             <label htmlFor='message'> Message </label>
           </div>
+          <div className='flex justify-center'>
             <Button text={loading ? 'Sending...' : 'Send'}/>
+          </div>
         </form>
       </div>
     </section>
