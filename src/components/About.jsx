@@ -2,9 +2,11 @@ import React from 'react'
 
 const About = () => {
   return (
-    <section id='About' className='flex lg:justify-between justify-center lg:items-center min-h-screen lg:flex-row flex-col-reverse mx-20 lg:mx-0'>
-      <div className='border-2 w-96 h-96 mr-[10%] scrollTrigger'>
-
+    <section id='About' className='flex lg:justify-between justify-center lg:items-center sm:min-h-screen min-h-[50vh] lg:flex-row flex-col-reverse mx-20 lg:mx-0'>
+      <div className='sm:flex hidden flex-col about items-center lg:items-start scale-90 lg:scale-100'>
+        <img src='programming.png' className='w-[80px] h-[80px] mt-[390px] opacity-0 codeIcon lg:ml-0 -ml-[310px]'/>
+        <img src='About-Line.svg' width={276} className='-mt-[390px] lg:ml-16'/>
+        <img id='img-web' src='web-design.png' className='w-[80px] h-[80px] lg:translate-x-[192px] translate-x-[70px] lg:ml-0 -ml-20 mt-6 grayscale'/>
       </div>
       <div className='flex flex-col'>
         <h2 className='mb-4'>{'<About Me>'}</h2>

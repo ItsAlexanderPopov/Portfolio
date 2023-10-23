@@ -8,7 +8,7 @@ gsap.registerPlugin(TextPlugin);
 
 const Header = () => {
   return (
-    <section id='Home' className='bg-mainColor flex lg:justify-between lg:flex-row lg:items-center justify-center flex-col-reverse mx-20 lg:mx-0 min-h-screen'>
+    <section id='Home' className='bg-mainColor flex lg:justify-between lg:flex-row lg:items-center justify-center flex-col-reverse mx-20 lg:mx-10 2xl:mx-0 min-h-screen'>
         <div className='flex flex-col gap-3 box-border'>
           <h1>
             I am <br className='lg:hidden block'/><span className='typewrite font-[600] text-thirdColor'> </span> <span className='cursorAnimation'>{`<`}</span> <br className='lg:hidden block'/>Developer
@@ -21,8 +21,8 @@ const Header = () => {
           </div>
             <Button text='Download CV'/>
       </div>
-      <div className='border-2 w-96 h-96 mr-[10%] translate-x-full scrollTrigger-R'>
-        
+      <div className='mr-[10%] bg-secondaryColor px-20 pt-2 rounded-lg portrait overflow-auto border-[6px] border-thirdColor'>
+        <img src='portrait.png' alt='portrait' className='opacity-90 scale-75 lg:scale-100' width={350}/>
       </div>
     </section>
   )

@@ -4,7 +4,7 @@
 
 :root {
   --mainColor: #0b132bff;
-  --lightMainColor: rgb(28, 37, 65);
+  --lightMainColor: #1c2541ff;
   --secondaryColor: #f8f4f9ff;
   --thirdColor: #fca311;
 }
@@ -224,6 +224,8 @@ input:focus + label, textarea:focus + label{
   animation: labelFadeIn 1s linear 0s forwards;
 }
 
+
+
 @keyframes labelFadeIn{
   0%{
     width: 0rem;
@@ -251,11 +253,18 @@ input:focus, textarea:focus, button:focus{
   outline: 1px solid var(--secondaryColor);
 }
 
-.scrollTrigger{
-  transform: translateX(-100%);
-  opacity: 0;
+.portrait{
+  animation: morph 20s linear infinite;
 }
-.scrollTrigger-R{
-  transform: translateX(100%);
-  opacity: 0;
+
+@keyframes morph {
+  0% {
+    border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+  }
+  50% {
+    border-radius: 30% 60% 70% 40%/50% 60% 30% 60%;
+  }
+  100% {
+    border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+  } 
 }

@@ -2,6 +2,7 @@ import React from 'react'
 import {BsGithub} from 'react-icons/bs'
 import {BiLinkExternal} from 'react-icons/bi'
 import {Image3D} from './'
+
 const ProjectCards = ({image, title, desc, skills, linkGit, linkDemo}) => {
   return (
     <div className='bg-lightMainColor rounded-lg mb-12 w-2/3 m-auto shadow-project shadow-black p-4 
