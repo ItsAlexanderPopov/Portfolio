@@ -9,7 +9,7 @@ const About = () => {
         <img id='img-web' src='web-design.png' className='w-[80px] h-[80px] lg:translate-x-[192px] translate-x-[70px] lg:ml-0 -ml-20 mt-6 grayscale'/>
       </div>
       <div className='flex flex-col'>
-        <h2 className='mb-4'>{'<About Me>'}</h2>
+        <h2 className='mb-4 text-center lg:text-start'>{'<About Me>'}</h2>
         <div className='flex flex-col bg-lightMainColor max-h-fit p-4 rounded-lg'>
           <p className='whitespace-pre-line text-slate-400 leading-8 conte-start'>
             {`

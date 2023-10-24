@@ -16,6 +16,10 @@ html{
   overflow-x: hidden;
 }
 
+#About, #Skills, #Projects, #Contact{
+  padding-top: 5%;
+}
+
 @media only screen and (min-width: 720px) {
   html {
       font-size: 12px;
@@ -220,11 +224,12 @@ label{
   line-height: 1.4;
 }
 
-input:focus + label, textarea:focus + label{
+input:focus + label,
+input.not-empty + label,
+textarea:focus + label,
+textarea.not-empty + label {
   animation: labelFadeIn 1s linear 0s forwards;
 }
-
-
 
 @keyframes labelFadeIn{
   0%{
@@ -251,6 +256,14 @@ input::selection, textarea::selection{
 
 input:focus, textarea:focus, button:focus{
   outline: 1px solid var(--secondaryColor);
+}
+
+input.not-empty:not(:focus), textarea.not-empty:not(:focus) { 
+  outline: 1px solid var(--secondaryColor);
+}
+
+input.not-empty:not(:focus):invalid, textarea.not-empty:not(:focus):invalid {
+  outline: 1px solid var(--thirdColor);
 }
 
 .portrait{

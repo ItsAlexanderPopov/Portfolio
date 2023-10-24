@@ -6,7 +6,7 @@ const Navbar = () => {
 
   const underlineAnimation = (index) => {
     gsap.timeline()
-    .to(".nav-underline", {scaleX: 0.02, duration:0.1}) // suggestion: fix multiple calls to this function to avoid staggering animations between long scrolls
+    .to(".nav-underline", {scaleX: 0.02, duration:0.1}) // suggestion to self: fix multiple calls to this function to avoid staggering animations between long scrolls
     .to(".nav-underline", {x: 120 * (index), duration:0.1, delay:1})
     .to(".nav-underline", {scaleX: 1, duration:0.1, delay:0.7})
   }

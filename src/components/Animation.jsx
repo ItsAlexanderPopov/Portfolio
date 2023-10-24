@@ -2,6 +2,9 @@ import React, {useEffect} from 'react'
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { MotionPathPlugin } from 'gsap/all';
+import { TextPlugin } from "gsap/TextPlugin";
+
+gsap.registerPlugin(TextPlugin);
 gsap.registerPlugin(ScrollTrigger)
 gsap.registerPlugin(MotionPathPlugin)
 

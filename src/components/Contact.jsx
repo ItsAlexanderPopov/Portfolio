@@ -16,12 +16,11 @@ const Contact = () => {
     const {name, value} = e.target;
     setForm({ ...form, [name]: value })
   }
+
   const handleSubmit = (e) => {
     e.preventDefault();
     setLoading(true)
     emailjs.send(
-      /* import.meta.env.EMAIL_SERVICE_ID, 
-      import.meta.env.EMAIL_TEMPLATE_ID, */
       "service_4nd5l95",
       "template_l1mw5e7",
       {
@@ -31,7 +30,6 @@ const Contact = () => {
         to_email: 'itsalexanderpopov@gmail.com',
         message: form.message,
       },
-      /* import.meta.env.EMAIL_PUBLIC_KEY */
       "IJ8WVX-UToXu6aJse"
       ).then(() => {
         setLoading(false)
@@ -64,7 +62,7 @@ const Contact = () => {
               value={form.name}
               required
               onChange={handleChange}
-              className='p-2 bg-mainColor rounded-md w-full mb-6'
+              className={`p-2 bg-mainColor rounded-md w-full mb-6 ${form.name !== '' ? 'not-empty' : ''}`}
             />
             <label htmlFor='name'> Name </label>
           </div>
@@ -78,7 +76,7 @@ const Contact = () => {
               autoComplete='off'
               required
               onChange={handleChange}
-              className='p-2 bg-mainColor rounded-md w-full mb-6'
+              className={`p-2 bg-mainColor rounded-md w-full mb-6 ${form.email !== '' ? 'not-empty' : ''}`}
             />
             <label htmlFor='email'> Email </label>
           </div>
@@ -90,7 +88,7 @@ const Contact = () => {
               value={form.message}
               required
               onChange={handleChange}
-              className='p-2 bg-mainColor rounded-md w-full resize-none mb-6'
+              className={`p-2 bg-mainColor rounded-md w-full mb-6 resize-none ${form.message !== '' ? 'not-empty' : ''}`}
             />
             <label htmlFor='message'> Message </label>
           </div>
