@@ -6,10 +6,10 @@ https://alexpopov.vercel.app
  The state is still unfinished since production, this is my personal roadmap until I finish my portfolio
  * [x] Add all the content.
  * [x] Special UI animations like the navbar, header, skills and more...
- * [ ] Add profile picture of me on the header instead of the placeholder square.
- * [ ] Add something *interesting* to About Me section's placeholder. (I thought of a room full of my hobbies as 3D model using ThreeJS and Maya, or something else)
+ * [x] Add profile picture of me on the header instead of the placeholder square.
+ * [x] Add something *interesting* to About Me section's placeholder.
  * [ ] Add CV to the "Download CV" button.
- * [ ] Add GSAP scroll animations to each of the page's sections when you enter and leave them.
+ * [x] Add GSAP scroll animations to each of the page's sections when you enter and leave them.
  * [ ] Add animation to button click.
 
 ## Technology Used
