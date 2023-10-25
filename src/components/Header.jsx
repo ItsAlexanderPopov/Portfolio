@@ -21,7 +21,7 @@ const Header = () => {
           </div>
             <Button text='Download CV'/>
       </div>
-      <div className='mr-[10%] bg-secondaryColor px-20 pt-2 rounded-lg min-[400px]:w-fit w-[150%]
+      <div className='mr-[10%] bg-secondaryColor px-20 pt-2 rounded-lg min-[400px]:w-fit w-max
       portrait overflow-auto border-[6px] border-thirdColor'>
         <img src='portrait.png' alt='portrait' className='opacity-90 w-full m-auto' style={{ width: '15rem', height: '24.4rem' }}/>
       </div>

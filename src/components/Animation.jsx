@@ -51,11 +51,11 @@ const Animation = () => {
 
             if (currentSrc !== src) {
             if(src === 'idea.svg'){
-                lineDesc.className = 'lineDesc hidden sm:flex flex-col justify-between h-[400px] text-lightMainColor [&_p:nth-child(1)]:text-thirdColor'
+                lineDesc.className = 'max-[300px]:hidden flex lineDesc lg:static absolute lg:left-0 left-10 flex-col justify-around h-[400px] text-lightMainColor [&_p:nth-child(1)]:text-thirdColor'
             } else if(src === 'code.svg'){
-                lineDesc.className = 'lineDesc hidden sm:flex flex-col justify-between h-[400px] text-thirdColor [&_p:nth-child(3)]:text-lightMainColor'
+                lineDesc.className = 'max-[300px]:hidden flex lineDesc lg:static absolute lg:left-0 left-10 flex-col justify-around h-[400px] text-thirdColor [&_p:nth-child(3)]:text-lightMainColor'
             } else{
-                lineDesc.className = 'lineDesc hidden sm:flex flex-col justify-between h-[400px] text-thirdColor'
+                lineDesc.className = 'max-[300px]:hidden flex lineDesc lg:static absolute lg:left-0 left-10 flex-col justify-around h-[400px] text-thirdColor'
             }
             const tl = gsap.timeline({
               onComplete: () => {
@@ -75,9 +75,9 @@ const Animation = () => {
         let scrollAbout = gsap.timeline({
             scrollTrigger:{
                 trigger: '.about',
-                start: '30% 120%',
-                end: '90% 40%',
-                scrub: 0,
+                start: 'center bottom',
+                end: 'center 32%',
+                scrub: 2,
                 onUpdate: () => {
                     const progress = scrollAbout.progress();
                     const roundedProgress = Math.round(progress * 10) / 10;
@@ -95,13 +95,10 @@ const Animation = () => {
                 onLeave: () => {
                     changeImageSrcAndAnimate('product.svg'); 
                 },
-                onLeaveBack: () => {
-                    changeImageSrcAndAnimate('code.svg');
-                }
             }
         })
 
-        gsap.set(".codeIcon", {xPercent:-50, yPercent:-50, transformOrigin:"50% 50%", opacity: 1});
+        gsap.set(".codeIcon", {xPercent:-50, yPercent:-50, transformOrigin:"50% 50%", opacity: 1,});
         scrollAbout
         .to(".codeIcon",{
             duration:0, 
@@ -109,7 +106,7 @@ const Animation = () => {
         })
         .to(".codeIcon", {
             motionPath:{
-                path:"M 130 -355 C 130 -265 40 -310 40 -220 C 40 -130 175 -190 175 -30 C 175 15 130 15 130 50                " },
+                path:"M 130 -355 C 130 -265 40 -310 40 -220 C 40 -130 175 -190 175 -30 C 175 15 130 15 130 50" },
                 ease:"power2.in",
             },);
     },[])
