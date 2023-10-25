@@ -6,7 +6,7 @@
   --mainColor: #0b132bff;
   --lightMainColor: #1c2541ff;
   --secondaryColor: #f8f4f9ff;
-  --thirdColor: #fca311;
+  --thirdColor: #fca311ff;
 }
 
 html{
@@ -17,7 +17,15 @@ html{
 }
 
 #About, #Skills, #Projects, #Contact{
-  padding-top: 5%;
+  margin-top: 25%;
+  padding-top: 0%;
+}
+
+@media only screen and (min-width: 620px) {
+  #About, #Skills, #Projects, #Contact{
+    margin-top: 5%;
+    padding-top: 5%;
+  }
 }
 
 @media only screen and (min-width: 720px) {
@@ -143,21 +151,21 @@ h2{
 .slide-track-first {
   animation: scroll-1st-row 40s linear infinite;
   display: flex;
-  width: calc(16.875em * 10); /* Multiplied by number of logos */
+  width: calc(16.875em * 11); /* Multiplied by number of logos */
   height: 150px;
 }
 
 .slide-track-second {
   animation: scroll-2nd-row 40s linear infinite;
   display: flex;
-  width: calc(16.875em * 8); /* Multiplied by number of logos */
+  width: calc(16.875em * 7); /* Multiplied by number of logos */
   height: 150px;
 }
 
 .slide-track-third {
   animation: scroll-3rd-row 40s linear infinite;
   display: flex;
-  width: calc(16.875em * 7); /* Multiplied by number of logos */
+  width: calc(16.875em * 8); /* Multiplied by number of logos */
   height: 150px;
 }
 
@@ -184,7 +192,7 @@ h2{
     transform: translateX(0);
   }
   100% {
-    transform: translateX(calc(-16.875em * 10)); /* Multiplied by number of logos */
+    transform: translateX(calc(-16.875em * 11)); /* Multiplied by number of logos */
   }
 }
 
@@ -250,7 +258,7 @@ input:focus::placeholder, textarea:focus::placeholder{
 }
 
 input::selection, textarea::selection{
-  background-color: var(--lightMainColor); /* Set the background color for selected text */
+  background-color: var(--lightMainColor);
   color:var(--secondaryColor);
 }
 
@@ -260,10 +268,6 @@ input:focus, textarea:focus, button:focus{
 
 input.not-empty:not(:focus), textarea.not-empty:not(:focus) { 
   outline: 1px solid var(--secondaryColor);
-}
-
-input.not-empty:not(:focus):invalid, textarea.not-empty:not(:focus):invalid {
-  outline: 1px solid var(--thirdColor);
 }
 
 .portrait{

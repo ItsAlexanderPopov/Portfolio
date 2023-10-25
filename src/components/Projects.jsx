@@ -3,7 +3,7 @@ import ProjectCards from './ProjectCards'
 import EchoIMG from '../assets/project-echo-ps.png'
 import DashboardIMG from '../assets/project-dashboard-ps.png'
 import SimonGameIMG from '../assets/project-simon-ps.png'
-import FolderProtectorIMG from '../assets/project-folder-protector-ps.png'
+import JokeGeneratorIMG from '../assets/project-joke-generator-ps.png'
 
 const Projects = () => {
   return (
@@ -30,14 +30,6 @@ const Projects = () => {
       />
 
       <ProjectCards
-        image={FolderProtectorIMG}
-        title={'Folder Protection'}
-        desc={`Desktop application that has been made and used as a puzzle in an Escape Room, It reveals a hidden folder when answered the question correctly.`}
-        skills={['React', 'Electron', 'CSS']}
-        linkGit={'https://github.com/ItsAlexanderPopov/Folder-Protection'}
-      />
-
-      <ProjectCards
         image={SimonGameIMG}
         title={'Simon Game'}
         desc={'The classic and popular Simon Game, test your memory power in both playable game difficulties.'}
@@ -45,6 +37,16 @@ const Projects = () => {
         linkGit={'https://github.com/ItsAlexanderPopov/Simon-game'}
         linkDemo={'https://simon-game-ap.vercel.app'}
       />
+
+      <ProjectCards
+        image={JokeGeneratorIMG}
+        title={'Joke Generator'}
+        desc={`Generate random amount of jokes, and save them to your own favorite page.`}
+        skills={['Flutter', 'Dart']}
+        linkGit={'https://github.com/ItsAlexanderPopov/Joke-Generator'}
+        linkDemo={'https://jokegenerator-ap.vercel.app'}
+      />
+
 
     </section>
   )

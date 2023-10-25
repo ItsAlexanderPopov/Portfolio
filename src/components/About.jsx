@@ -2,12 +2,18 @@ import React from 'react'
 
 const About = () => {
   return (
-    <section id='About' className='flex lg:justify-between justify-center lg:items-center sm:min-h-screen min-h-[50vh] lg:flex-row flex-col-reverse mx-20 lg:mx-0'>
-      <div className='sm:flex hidden flex-col about items-center lg:items-start scale-90 lg:scale-100'>
-        <img src='programming.png' className='w-[80px] h-[80px] mt-[390px] opacity-0 codeIcon lg:ml-0 -ml-[310px]'/>
-        <img src='About-Line.svg' width={276} className='-mt-[390px] lg:ml-16'/>
-        <img id='img-web' src='web-design.png' className='w-[80px] h-[80px] lg:translate-x-[192px] translate-x-[70px] lg:ml-0 -ml-20 mt-6 grayscale'/>
+    <section id='About' className='flex lg:justify-around justify-center lg:items-center sm:min-h-screen min-h-[50vh] lg:flex-row flex-col-reverse mx-20 lg:mx-0'>
+    <div className='flex justify-center items-center gap-8'>
+      <div className='lineDesc hidden sm:flex flex-col justify-between h-[400px] text-lightMainColor [&_p:nth-child(1)]:text-thirdColor'>
+        <p>Idea</p>
+        <p>Coding . . .</p>
+        <p>Product</p>
       </div>
+      <div className='min-[300px]:flex hidden flex-col about items-center lg:items-start'>
+        <img src='About-Line1.svg' width={200} className='translate-y-10'/>
+        <img src='idea.svg' className='codeIcon lg:w-[80px] lg:h-[80px] w-[60px] h-[60px] -translate-y-[400px] translate-x-[90px] mr-[140px] -mt-[10px]'/>
+      </div>
+    </div>
       <div className='flex flex-col'>
         <h2 className='mb-4 text-center lg:text-start'>{'<About Me>'}</h2>
         <div className='flex flex-col bg-lightMainColor max-h-fit p-4 rounded-lg'>

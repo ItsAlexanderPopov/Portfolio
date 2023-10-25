@@ -55,6 +55,12 @@ const Skills = () => {
     alt: 'ThreeJS',
     logoName: 'Three.js'
   },
+  ,{
+    id: 11,
+    src: 'SkillLogos/flutter.svg',
+    alt: 'Flutter',
+    logoName: 'Flutter'
+  },
 ]
 const backendLogos=[
   {
@@ -138,8 +144,8 @@ const toolsLogos=[
   },
 ]
   return (
-    <section id='Skills' className='items-center justify-center flex flex-col gap-12 -mt-12 min-h-screen'>
-        <h2 className='-mb-8'>{`<Skills>`}</h2>
+    <section id='Skills' className='flex flex-col gap-12 min-h-screen'>
+        <h2 className='-mb-8 text-center'>{`<Skills>`}</h2>
         <div className="slider">
           <div className="slide-track-first">
             {frontendLogos.map((logo) => (

@@ -1,6 +1,6 @@
 import React, { useState, useRef } from 'react'
 import emailjs from '@emailjs/browser'
-import {Button, Footer} from './'
+import {Button} from './'
 
 
 const Contact = () => {
@@ -43,7 +43,7 @@ const Contact = () => {
       })
   }
   return (
-    <section className='flex justify-center items-center flex-col min-h-screen'>
+    <section className='flex justify-end items-center flex-col min-h-screen mb-[120px]'>
         <h2 className='text-center'>{'<Contact Me>'}</h2>
         <div className='bg-lightMainColor rounded-lg sm:w-1/3 w-4/5 shadow-project shadow-black px-6'>
         <form

@@ -26,8 +26,6 @@ const Animation = () => {
             toggleActions: "play reverse play reverse"
         })
 
-        
-
         // Project Cards Animation
         const elements = document.querySelectorAll('.scrollTrigger-P');
         // Loop through each element and create a ScrollTrigger for each
@@ -43,30 +41,67 @@ const Animation = () => {
             duration:1
         });
         });
+        
+        let lastRoundedProgress = -1;
+        
+        const changeImageSrcAndAnimate = (src) => {
+            const lineDesc = document.querySelector('.lineDesc');
+            const codeIcon = document.querySelector('.codeIcon');
+            const currentSrc = codeIcon.src.substring(codeIcon.src.lastIndexOf('/') + 1);
+
+            if (currentSrc !== src) {
+            if(src === 'idea.svg'){
+                lineDesc.className = 'lineDesc hidden sm:flex flex-col justify-between h-[400px] text-lightMainColor [&_p:nth-child(1)]:text-thirdColor'
+            } else if(src === 'code.svg'){
+                lineDesc.className = 'lineDesc hidden sm:flex flex-col justify-between h-[400px] text-thirdColor [&_p:nth-child(3)]:text-lightMainColor'
+            } else{
+                lineDesc.className = 'lineDesc hidden sm:flex flex-col justify-between h-[400px] text-thirdColor'
+            }
+            const tl = gsap.timeline({
+              onComplete: () => {
+                // Change the image source after scaling down
+                codeIcon.src = src;
+                
+                // Create a new timeline for scaling back up
+                const tl2 = gsap.timeline();
+                tl2.to(codeIcon, { scale: 1, duration: 0.2 });
+              },
+            });
+          
+            // First animation: Scale down to 0.2
+            tl.to(codeIcon, { scale: 0, duration: 0.2 });
+        }};
 
         let scrollAbout = gsap.timeline({
             scrollTrigger:{
                 trigger: '.about',
-                start: 'top 120%',
-                end: 'bottom center',
-                scrub: 2,
+                start: '30% 120%',
+                end: '90% 40%',
+                scrub: 0,
+                onUpdate: () => {
+                    const progress = scrollAbout.progress();
+                    const roundedProgress = Math.round(progress * 10) / 10;
+                    if (roundedProgress !== lastRoundedProgress) {
+                        lastRoundedProgress = roundedProgress;
+                        console.log(roundedProgress);
+                     }
+                    if(lastRoundedProgress < 0.7){
+                        changeImageSrcAndAnimate('idea.svg'); 
+                    }
+                    else if (lastRoundedProgress >= 0.7 && lastRoundedProgress < 1) {
+                      changeImageSrcAndAnimate('code.svg'); 
+                    }
+                  },
                 onLeave: () => {
-                     const webImage = document.getElementById('img-web');
-                    if (webImage) {
-                      webImage.className = 'w-[80px] h-[80px] lg:ml-0 -ml-20 lg:translate-x-[192px] translate-x-[70px] mt-6 grayscale-0';
-                    } 
+                    changeImageSrcAndAnimate('product.svg'); 
                 },
-                onEnterBack: () => {
-                    const webImage = document.getElementById('img-web');
-                   if (webImage) {
-                     webImage.className = 'w-[80px] h-[80px] lg:ml-0 -ml-20 lg:translate-x-[192px] translate-x-[70px] mt-6 grayscale';
-                   } 
-               },
-               
+                onLeaveBack: () => {
+                    changeImageSrcAndAnimate('code.svg');
+                }
             }
         })
 
-        gsap.set(".codeIcon", {xPercent:-50, yPercent:-50, transformOrigin:"50% 50%"});
+        gsap.set(".codeIcon", {xPercent:-50, yPercent:-50, transformOrigin:"50% 50%", opacity: 1});
         scrollAbout
         .to(".codeIcon",{
             duration:0, 
@@ -74,7 +109,7 @@ const Animation = () => {
         })
         .to(".codeIcon", {
             motionPath:{
-                path:"M 240 -300 C 240 -180 120 -240 120 -120 C 120 0 300 -80 300 120 C 300 180 240 180 240 240" },
+                path:"M 130 -355 C 130 -265 40 -310 40 -220 C 40 -130 175 -190 175 -30 C 175 15 130 15 130 50                " },
                 ease:"power2.in",
             },);
     },[])
