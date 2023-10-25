@@ -8,9 +8,8 @@ https://alexpopov.vercel.app
  * [x] Special UI animations like the navbar, header, skills and more...
  * [x] Add profile picture of me on the header instead of the placeholder square.
  * [x] Add something *interesting* to About Me section's placeholder.
- * [ ] Add CV to the "Download CV" button.
  * [x] Add GSAP scroll animations to each of the page's sections when you enter and leave them.
- * [ ] Add animation to button click.
+ * [ ] Add CV to the "Download CV" button.
 
 ## Technology Used
 <div>
