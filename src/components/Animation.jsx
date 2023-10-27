@@ -83,7 +83,6 @@ const Animation = () => {
                     const roundedProgress = Math.round(progress * 10) / 10;
                     if (roundedProgress !== lastRoundedProgress) {
                         lastRoundedProgress = roundedProgress;
-                        console.log(roundedProgress);
                      }
                     if(lastRoundedProgress < 0.7){
                         changeImageSrcAndAnimate('idea.svg'); 

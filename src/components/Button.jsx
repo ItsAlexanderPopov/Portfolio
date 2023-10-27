@@ -1,7 +1,19 @@
 import React, {useState} from 'react'
 
-const Button = ({text}) => {
+const Button = ({text}, download) => {
     const [isHovered, setIsHovered] = useState(false);
+
+    const handleDownlaod = () => {
+      if(download !== null){
+        const link = document.createElement('a');
+        link.href = 'Alex_Popov_Resume.pdf';
+        link.download = 'Alex_Popov_Resume.pdf';
+        link.target = '_blank';
+        link.rel="noreferrer";
+        link.click();
+      }
+    }
+
   return (
     <button
         className={`relative bg-mainColor text-secondaryColor p-[1rem] text-[1rem] 
@@ -11,6 +23,7 @@ const Button = ({text}) => {
         duration-500 w-[11.25rem] h-[3.5rem] flex justify-center items-center ${isHovered ? 'hovered' : ''}`}
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
+        onClick={handleDownlaod}
     >
         <span className={`absolute left-0 top-0 transform ${!isHovered ? '-translate-x-[1.5rem]' : 'translate-x-[0.75rem]'} 
         pointer-events-none font-normal text-[2.4rem] text-thirdColor transition-transform duration-500`}>
