@@ -6,8 +6,8 @@ const Button = ({text}, download) => {
     const handleDownlaod = () => {
       if(download !== null){
         const link = document.createElement('a');
-        link.href = 'Alex_Popov_CV.pdf';
-        link.download = 'Alex_Popov_CV.pdf';
+        link.href = 'AlexPopovCV.pdf';
+        link.download = 'AlexPopovCV.pdf';
         link.target = '_blank';
         link.rel="noreferrer";
         link.click();
