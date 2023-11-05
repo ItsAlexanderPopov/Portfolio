@@ -19,7 +19,7 @@ const Header = () => {
           <div className='my-4'>
             <Socials/>
           </div>
-            <Button text='Download CV'/>
+            <Button text='Download CV' download='AlexPopovCV.pdf'/>
       </div>
       <div className='mr-[10%] bg-secondaryColor px-20 pt-2 rounded-lg min-[400px]:w-fit w-max
       portrait overflow-auto border-[6px] border-thirdColor'>
