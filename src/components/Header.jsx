@@ -5,7 +5,7 @@ import {Button} from './'
 const Header = () => {
   return (
     <section id='Home' className='bg-mainColor flex lg:justify-between lg:flex-row lg:items-center 
-    justify-center flex-col-reverse mx-20 lg:mx-10 2xl:mx-0 min-h-screen items-center'>
+    justify-center flex-col-reverse mx-20 lg:mx-10 2xl:mx-0 items-center'>
       <div className='flex flex-col gap-3 box-border'>
           <h1>
             I am <br className='sm:hidden block'/>

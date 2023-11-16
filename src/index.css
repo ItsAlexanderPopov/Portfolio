@@ -21,6 +21,11 @@ html{
   padding-top: 0%;
 }
 
+#Home{
+  min-height: 100vh;
+  min-height: 100svh;
+}
+
 @media only screen and (min-width: 620px) {
   #About, #Skills, #Projects, #Contact{
     margin-top: 5%;
