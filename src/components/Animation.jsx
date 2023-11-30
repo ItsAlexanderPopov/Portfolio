@@ -97,17 +97,24 @@ const Animation = () => {
             }
         })
 
-        gsap.set(".codeIcon", {xPercent:-50, yPercent:-50, transformOrigin:"50% 50%", opacity: 1,});
-        scrollAbout
-        .to(".codeIcon",{
-            duration:0, 
-            opacity:1
-        })
-        .to(".codeIcon", {
-            motionPath:{
-                path:"M 130 -355 C 130 -265 40 -310 40 -220 C 40 -130 175 -190 175 -30 C 175 15 130 15 130 50" },
-                ease:"power2.in",
-            },);
+        gsap.set(".codeIcon", {
+            xPercent: -50,
+            yPercent: -50,
+            transformOrigin: "50% 50%",
+            opacity: 1,
+          });
+          
+        scrollAbout.to(".codeIcon", { duration: 0, opacity: 1 }).to(
+            ".codeIcon",
+            {
+              motionPath: {
+                path: "M 130 -355 C 130 -265 40 -310 40 -220 C 40 -130 175 -190 175 -30 C 175 15 130 15 130 50",
+                start: 0,
+              },
+              ease: "power2.in",
+            }
+          );
+          
     },[])
   return (
     <></>
