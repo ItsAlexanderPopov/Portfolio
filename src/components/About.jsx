@@ -20,8 +20,8 @@ const About = () => {
     </div>
       <div className='flex flex-col'>
         <h2 className='mb-4 text-center lg:text-start'>{'<About Me>'}</h2>
-        <div className='flex flex-col bg-lightMainColor max-h-fit p-4 rounded-lg'>
-          <p className='whitespace-pre-line text-slate-400 leading-8 conte-start'>
+        <div className='flex flex-col bg-lightMainColor max-h-fit p-4 rounded-lg pb-10'>
+          <p className='whitespace-pre-line text-slate-400 leading-8'>
             {`
               a passionate and creative self taught fullstack developer.
               I turn innovative ideas into functional and user-friendly applications.

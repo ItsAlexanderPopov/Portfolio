@@ -17,8 +17,8 @@ const Skills = () => {
   },{
     id: 3,
     src: 'SkillLogos/javascript.svg',
-    alt: 'JavaScript',
-    logoName: 'JavaScript'
+    alt: 'JS/TS',
+    logoName: 'JS / TS'
   },{
     id: 4,
     src: 'SkillLogos/jquery.svg',
@@ -31,35 +31,24 @@ const Skills = () => {
     logoName: 'React'
   },{
     id: 6,
-    src: 'SkillLogos/nextjs.svg',
-    alt: 'NextJS',
-    logoName: 'Next.js'
+    src: 'SkillLogos/react.svg',
+    alt: 'React Native',
+    logoName: 'React Native'
   },{
     id: 7,
-    src: 'SkillLogos/electron.svg',
-    alt: 'Electron',
-    logoName: 'Electron'
-  },{
-    id: 8,
     src: 'SkillLogos/tailwindcss.svg',
     alt: 'Tailwind',
     logoName: 'Tailwind'
   },{
-    id: 9,
-    src: 'SkillLogos/gsap.svg',
-    alt: 'GSAP',
-    logoName: 'GSAP'
-  },{
-    id: 10,
-    src: 'SkillLogos/threejs.svg',
-    alt: 'ThreeJS',
-    logoName: 'Three.js'
-  },
-  ,{
-    id: 11,
+    id: 8,
     src: 'SkillLogos/flutter.svg',
     alt: 'Flutter',
     logoName: 'Flutter'
+  },{
+    id: 9,
+    src: 'SkillLogos/nextjs.svg',
+    alt: 'NextJS',
+    logoName: 'Next.js'
   },
 ]
 const backendLogos=[
@@ -128,20 +117,11 @@ const toolsLogos=[
     logoName: 'Docker'
   },{
     id: 6,
-    src: 'SkillLogos/vscode.svg',
-    alt: 'VSCode',
-    logoName: 'VSCode'
-  },{
-    id: 7,
-    src: 'SkillLogos/eclipse.svg',
-    alt: 'Eclipse',
-    logoName: 'Eclipse'
-  },{
-    id: 8,
-    src: 'SkillLogos/intellij.svg',
-    alt: 'Intellij',
-    logoName: 'Intellij'
+    src: 'SkillLogos/aws.svg',
+    alt: 'AWS',
+    logoName: 'AWS'
   },
+  
 ]
   return (
     <section id='Skills' className='flex flex-col gap-12 min-h-screen'>

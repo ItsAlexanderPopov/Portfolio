@@ -154,23 +154,23 @@ h2{
 }
 
 .slide-track-first {
-  animation: scroll-1st-row 40s linear infinite;
+  animation: scroll-1st-row 36s linear infinite;
   display: flex;
-  width: calc(16.875em * 11); /* Multiplied by number of logos */
+  width: calc(16.875em * 9); /* Multiplied by number of logos */
   height: 150px;
 }
 
 .slide-track-second {
-  animation: scroll-2nd-row 40s linear infinite;
+  animation: scroll-2nd-row 28s linear infinite;
   display: flex;
   width: calc(16.875em * 7); /* Multiplied by number of logos */
   height: 150px;
 }
 
 .slide-track-third {
-  animation: scroll-3rd-row 40s linear infinite;
+  animation: scroll-3rd-row 24s linear infinite;
   display: flex;
-  width: calc(16.875em * 8); /* Multiplied by number of logos */
+  width: calc(16.875em * 6); /* Multiplied by number of logos */
   height: 150px;
 }
 
@@ -197,7 +197,7 @@ h2{
     transform: translateX(0);
   }
   100% {
-    transform: translateX(calc(-16.875em * 11)); /* Multiplied by number of logos */
+    transform: translateX(calc(-16.875em * 9)); /* Multiplied by number of logos */
   }
 }
 
@@ -215,7 +215,7 @@ h2{
     transform: translateX(0);
   }
   100% {
-    transform: translateX(calc(-16.875em * 8)); /* Multiplied by number of logos */
+    transform: translateX(calc(-16.875em * 6)); /* Multiplied by number of logos */
   }
 }
 
