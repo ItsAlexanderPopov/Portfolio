@@ -8,7 +8,7 @@ const Header = () => {
     justify-center flex-col-reverse mx-20 lg:mx-10 2xl:mx-0 items-center'>
       <div className='flex flex-col gap-3 box-border'>
           <h1>
-            I am <br className='sm:hidden block'/>
+            I am a <br className='sm:hidden block'/>
             <span className='typewrite font-[600] text-thirdColor'></span> 
             <span className='cursorAnimation'>{`<`}</span> 
             <br className='xl:hidden block'/>Developer
