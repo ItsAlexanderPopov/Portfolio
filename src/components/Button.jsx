@@ -3,8 +3,9 @@ import React, {useState} from 'react'
 const Button = ({text, download}) => {
     const [isHovered, setIsHovered] = useState(false);
 
-    const handleDownlaod = (download) => {
-      if(download !== null){
+    const handleClick = (e) => {
+      if (download) {
+        e.preventDefault();
         const link = document.createElement('a');
         link.href = download;
         link.download = download;
@@ -23,8 +24,9 @@ const Button = ({text, download}) => {
         duration-500 w-[11.25rem] h-[3.5rem] flex justify-center items-center ${isHovered ? 'hovered' : ''}`}
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
-        onClick={() => handleDownlaod(download)}
-    >
+        type={download ? "button" : "submit"}
+        onClick={handleClick}
+        >
         <span className={`absolute left-0 top-0 transform ${!isHovered ? '-translate-x-[1.5rem]' : 'translate-x-[0.75rem]'} 
         pointer-events-none font-normal text-[2.4rem] text-thirdColor transition-transform duration-500`}>
         {'>'}
