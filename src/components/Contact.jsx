@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react'
+import React, { useState, useRef, useEffect } from 'react'
 import emailjs from '@emailjs/browser'
 import {Button} from './'
 
@@ -12,36 +12,46 @@ const Contact = () => {
   })
   const [loading, setLoading] = useState(false)
 
+  useEffect(() => {
+    // Initialize EmailJS
+    emailjs.init(import.meta.env.VITE_EMAIL_PUBLIC_KEY);
+  }, [])
+
   const handleChange = (e) => {
-    const {name, value} = e.target;
+    const { name, value } = e.target;
     setForm({ ...form, [name]: value })
   }
 
   const handleSubmit = (e) => {
     e.preventDefault();
     setLoading(true)
+
+    console.log('Sending email with data:', {
+      serviceId: import.meta.env.VITE_EMAIL_SERVICE_ID,
+      templateId: import.meta.env.VITE_EMAIL_TEMPLATE_ID,
+      form: form
+    })
+
     emailjs.send(
-      "service_4nd5l95",
-      "template_l1mw5e7",
+      import.meta.env.VITE_EMAIL_SERVICE_ID,
+      import.meta.env.VITE_EMAIL_TEMPLATE_ID,
       {
         from_name: form.name,
-        to_name: 'Alex Popov',
         from_email: form.email,
-        to_email: 'itsalexanderpopov@gmail.com',
         message: form.message,
-      },
-      "IJ8WVX-UToXu6aJse"
-      ).then(() => {
-        setLoading(false)
-        alert('Message has been sent, thank you! I will respond as soon as possible.')
-        setForm({name:'', email:'', message:''})
-
-      }, (error)=> {
-        setLoading(false)
-        console.log(error)
-        alert('Something went wrong.')
-      })
+      }
+    ).then((response) => {
+      console.log('EmailJS success:', response)
+      setLoading(false)
+      alert('Message has been sent, thank you! I will respond as soon as possible.')
+      setForm({ name: '', email: '', message: '' })
+    }, (error) => {
+      console.error('EmailJS error:', error)
+      setLoading(false)
+      alert('Something went wrong. Please check the console for more details.')
+    })
   }
+
   return (
     <section className='flex justify-end items-center flex-col min-h-screen mb-[120px]'>
         <h2 className='text-center'>{'<Contact Me>'}</h2>

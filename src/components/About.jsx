@@ -28,6 +28,8 @@ const About = () => {
               With a solid grasp of frontend and backend modern technologies.
               Constantly improving skills for clean, efficient, up-to-date code.
               I'm a collaborative team player who consistently delivers high-quality work.
+              Experienced in both web and mobile developement.
+              Skilled in working solo, in a team, and also leading.
           `}
           </p>
         </div>

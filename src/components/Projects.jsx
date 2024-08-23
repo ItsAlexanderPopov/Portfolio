@@ -3,14 +3,21 @@ import ProjectCards from './ProjectCards'
 import EchoIMG from '../assets/project-echo-ps.png'
 import DashboardIMG from '../assets/project-dashboard-ps.png'
 import SimonGameIMG from '../assets/project-simon-ps.png'
-import JokeGeneratorIMG from '../assets/project-joke-generator-ps.png'
+import SafeAIIMG from '../assets/project-safeai.png'
 
 const Projects = () => {
   return (
     <section id='Projects' className='py-20'>
 
       <h2 className='mb-4 text-center'>{'<Projects>'}</h2>
-
+     
+      <ProjectCards
+        image={SafeAIIMG}
+        title={'SafeAI'}
+        desc={`Meet your AI-powered virtual companions, helping you overcome mental challenges; accessible anytime, anywhere with voice to voice.`}
+        skills={['Flutter', 'Dart', 'Python', 'SQL']}
+        linkDemo={'https://play.google.com/store/apps/details?id=com.aitherapy.safe'}
+      />
       <ProjectCards
         image={EchoIMG}
         title={'Echo'}
@@ -37,16 +44,6 @@ const Projects = () => {
         linkGit={'https://github.com/ItsAlexanderPopov/Simon-game'}
         linkDemo={'https://simon-game-ap.vercel.app'}
       />
-
-      <ProjectCards
-        image={JokeGeneratorIMG}
-        title={'Joke Generator'}
-        desc={`Generate random amount of jokes, and save them to your own favorite page.`}
-        skills={['Flutter', 'Dart']}
-        linkGit={'https://github.com/ItsAlexanderPopov/Joke-Generator'}
-        linkDemo={'https://jokegenerator-ap.vercel.app'}
-      />
-
 
     </section>
   )

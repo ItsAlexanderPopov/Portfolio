@@ -24,9 +24,10 @@ const ProjectCards = ({image, title, desc, skills, linkGit, linkDemo}) => {
             </div>
             {/* Links */}
             <div className='text-xl flex justify-around'>
-              <a className='flex justify-center gap-3 items-center hover:text-thirdColor duration-300 ease-in-out underline underline-offset-2' href={linkGit} target="_blank"> GitHub<BsGithub/></a>
+              {linkGit ? <a className='flex justify-center gap-3 items-center hover:text-thirdColor duration-300 ease-in-out underline underline-offset-2' 
+                href={linkGit} target="_blank"> GitHub<BsGithub/></a> : null}
               {linkDemo ? <a className='flex justify-center gap-3 items-center hover:text-thirdColor duration-300 ease-in-out underline underline-offset-2'
-               href={linkDemo} target="_blank"> Live Demo<BiLinkExternal/></a> : null}
+                href={linkDemo} target="_blank"> Live Demo<BiLinkExternal/></a> : null}
             </div>
 
         </div>
