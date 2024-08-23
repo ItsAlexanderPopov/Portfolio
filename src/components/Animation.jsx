@@ -11,7 +11,7 @@ gsap.registerPlugin(MotionPathPlugin)
 const Animation = () => {
 
     useEffect(()=> {
-        const typewriteTextArr = ["Fullstack", "Web", "Software"]
+        const typewriteTextArr = ["Fullstack", "Web", "Software", "Mobile"]
         gsap.to('.cursorAnimation', {opacity: 0, ease:"power2.inOut", repeat: -1, duration:0.5, repeatDelay:0.3})
         
         let typewrite = gsap.timeline({repeat: -1})
