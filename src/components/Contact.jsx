@@ -26,12 +26,6 @@ const Contact = () => {
     e.preventDefault();
     setLoading(true)
 
-    console.log('Sending email with data:', {
-      serviceId: import.meta.env.VITE_EMAIL_SERVICE_ID,
-      templateId: import.meta.env.VITE_EMAIL_TEMPLATE_ID,
-      form: form
-    })
-
     emailjs.send(
       import.meta.env.VITE_EMAIL_SERVICE_ID,
       import.meta.env.VITE_EMAIL_TEMPLATE_ID,
@@ -41,12 +35,10 @@ const Contact = () => {
         message: form.message,
       }
     ).then((response) => {
-      console.log('EmailJS success:', response)
       setLoading(false)
       alert('Message has been sent, thank you! I will respond as soon as possible.')
       setForm({ name: '', email: '', message: '' })
-    }, (error) => {
-      console.error('EmailJS error:', error)
+    }, () => {
       setLoading(false)
       alert('Something went wrong. Please check the console for more details.')
     })
