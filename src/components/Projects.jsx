@@ -16,7 +16,8 @@ const Projects = () => {
         title={'SafeAI'}
         desc={`Meet your AI-powered virtual companions, helping you overcome mental challenges; accessible anytime, anywhere with voice to voice.`}
         skills={['Flutter', 'Dart', 'Python', 'SQL']}
-        linkDemo={'https://play.google.com/store/apps/details?id=com.aitherapy.safe'}
+        linkAndroid={'https://play.google.com/store/apps/details?id=com.aitherapy.safe'}
+        linkIOS={'https://apps.apple.com/il/app/safeai-for-mental-well-being/id6480476776'}
       />
       <ProjectCards
         image={EchoIMG}
